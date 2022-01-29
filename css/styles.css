@@ -104,7 +104,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.header-link:hover {
+.header-link:hover,
+.header-link:focus {
   color: var(--accent-color);
 }
 .header-item + .header-item {
@@ -120,7 +121,9 @@ body {
   color: var(--title-text-color);
 }
 .header-link.mail:hover,
-.header-link.tel:hover {
+.header-link.mail:focus,
+.header-link.tel:hover,
+.header-link.tel:focus {
   color: var(--accent-color);
 }
 .icon-envelope {
@@ -304,7 +307,8 @@ body {
   border-radius: 50%;
   color: #afb1b8;
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   color: #ffffff;
   background-color: var(--accent-color);
 }
@@ -327,21 +331,14 @@ body {
   justify-content: center;
 }
 .customers-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   width: 170px;
   height: 92px;
-
-  border: 1px solid #afb1b8;
   box-sizing: border-box;
-  border-radius: 4px;
-  color: #afb1b8;
 }
-.customers-item:hover {
+.customers-link:hover,
+.customers-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: 1px solid #2196f3;
+  border-color: var(--accent-color);
   color: var(--accent-color);
 }
 .customers-item + .customers-item {
@@ -349,11 +346,19 @@ body {
 }
 
 .customers-link {
-  color: currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+
+  border-radius: 4px;
+  color: #afb1b8;
 }
-.customers-link:hover {
+/* .customers-link:hover {
   color: var(--accent-color);
-}
+} */
 .logo-icon {
   fill: currentColor;
 }
@@ -402,6 +407,7 @@ body {
 
 .footer-cont {
   display: flex;
+  align-items: baseline;
 }
 .footer-text {
   font-weight: 700;
@@ -413,7 +419,6 @@ body {
 }
 .footer-social {
   margin-left: 70px;
-  padding-top: 12px;
 }
 .footer-text {
   margin-bottom: 20px;
@@ -437,7 +442,8 @@ body {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
-.social-link-footer:hover {
+.social-link-footer:hover,
+.social-link-footer:focus {
   color: #ffffff;
   background-color: var(--accent-color);
 }
@@ -467,6 +473,7 @@ body {
   letter-spacing: 0.03em;
   font-style: inherit;
   cursor: pointer;
+  border: 0;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -486,7 +493,11 @@ body {
   margin-left: var(--card-gap);
   flex-basis: calc(100% / 3 - var(--card-gap));
 }
-.portfolio-item:hover {
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /* .portfolio-link {
